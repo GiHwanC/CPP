@@ -2,31 +2,40 @@
 #include <string>
 using namespace std;
 
-class Point { // 2Â÷¿ø Æò¸é¿¡¼­ ÇÑ Á¡À» Ç¥ÇöÇÏ´Â Å¬·¡½º Point ¼±¾ð
-	int x, y; //ÇÑ Á¡ (x,y) ÁÂÇ¥°ª
+class Point
+{			  // 2ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½é¿¡ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ï¿½Ï´ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ Point ï¿½ï¿½ï¿½ï¿½
+	int x, y; // ï¿½ï¿½ ï¿½ï¿½ (x,y) ï¿½ï¿½Ç¥ï¿½ï¿½
 public:
-	void set(int x, int y) { this->x = x; this->y = y; }
-	void showPoint() {
+	void set(int x, int y)
+	{
+		this->x = x;
+		this->y = y;
+	}
+	void showPoint()
+	{
 		cout << "(" << x << "," << y << ")" << endl;
 	}
 };
 
-class ColorPoint : public Point { // 2Â÷¿ø Æò¸é¿¡¼­ ÄÃ·¯ Á¡À» Ç¥ÇöÇÏ´Â Å¬·¡½º ColorPoint. Point¸¦ »ó¼Ó¹ÞÀ½
-	string color;// Á¡ÀÇ »ö Ç¥Çö
+class ColorPoint : public Point
+{				  // 2ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½é¿¡ï¿½ï¿½ ï¿½Ã·ï¿½ ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ï¿½Ï´ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ColorPoint. Pointï¿½ï¿½ ï¿½ï¿½Ó¹ï¿½ï¿½ï¿½
+	string color; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Ç¥ï¿½ï¿½
 public:
-	void setColor(string color)  {	this->color = color; }
+	void setColor(string color) { this->color = color; }
 	void showColorPoint();
 };
 
-void ColorPoint::showColorPoint() {
+void ColorPoint::showColorPoint()
+{
 	cout << color << ":";
-	showPoint(); // PointÀÇ showPoint() È£Ãâ
+	showPoint(); // Pointï¿½ï¿½ showPoint() È£ï¿½ï¿½
 }
 
-int main() {
-	Point p; // ±âº» Å¬·¡½ºÀÇ °´Ã¼ »ý¼º
-	ColorPoint cp; // ÆÄ»ý Å¬·¡½ºÀÇ °´Ã¼ »ý¼º
-	cp.set(3,4); // ±âº» Å¬·¡½ºÀÇ ¸â¹ö È£Ãâ
-	cp.setColor("Red"); // ÆÄ»ý Å¬·¡½ºÀÇ ¸â¹ö È£Ãâ
-	cp.showColorPoint(); // ÆÄ»ý Å¬·¡½ºÀÇ ¸â¹ö È£Ãâ
+int main()
+{
+	Point p;			 // ï¿½âº» Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½
+	ColorPoint cp;		 // ï¿½Ä»ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½
+	cp.set(3, 4);		 // ï¿½âº» Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ È£ï¿½ï¿½
+	cp.setColor("Red");	 // ï¿½Ä»ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ È£ï¿½ï¿½
+	cp.showColorPoint(); // ï¿½Ä»ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ È£ï¿½ï¿½
 }
