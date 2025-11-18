@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/gimgihwan/C++/10장.템플릿과STL",
-      "program": "/Users/gimgihwan/C++/10장.템플릿과STL/build/Debug/outDebug"
+      "cwd": "/Users/gimgihwan/C++",
+      "program": "/Users/gimgihwan/C++/build/Debug/outDebug"
     }
   ]
 }
