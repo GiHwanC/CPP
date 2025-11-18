@@ -2,20 +2,23 @@
 #include <iostream>
 using namespace std;
 
-class Base{
+class Base
+{
 public:
     virtual void f() { cout << "Base:f() called" << endl; }
 };
 
-class Derived : public Base{
+class Derived : public Base
+{
 public:
     virtual void f() { cout << "Derived::f() called" << endl; }
 };
 
-int main(void) {
+int main(void)
+{
     Derived d, *pDer;
-    pDer = &d;  // 객체 d를 가리킨다.
-    pDer->f();  // Derived::f() 호출
+    pDer = &d; // 객체 d를 가리킨다.
+    pDer->f(); // Derived::f() 호출
 
     Base *pBase;
     pBase = pDer; // 업 캐스팅. 객체 d를 가리킨다.

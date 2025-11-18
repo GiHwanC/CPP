@@ -28,8 +28,10 @@ void myswap(T &a, T &b){
 
 template <class T1, class T2>
 void myswap(T1 &a, T2 &b){
-    T1 = tmp1, T2 = tmp2;
-    
+    T2 tmp;
+    tmp = a;
+    a = b;
+    b = tmp;
 }
 
 int main()
@@ -43,7 +45,7 @@ int main()
     cout << c << '\t' << d << endl;
 
     
-    myswap(a, c); // myswap(double& a, double& b) ȣ��
+    myswap(a, c); // myswap(int& a, double& b) ȣ��
     cout << c << '\t' << d << endl;
 
     char e = 'A', f = 'B';

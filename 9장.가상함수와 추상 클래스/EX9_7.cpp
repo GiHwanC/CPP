@@ -7,4 +7,4 @@ class Calculator {
         cout << "정수 2개를 입력하세요 >> ";
         cin >> a >> b;
     }
-}
+};
